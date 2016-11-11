@@ -48,15 +48,27 @@ li {
   border-color: #555;
 }
 .navigation .list {
-  padding: 10px 15px 0 15px;
   position: relative;
   overflow: auto;
   width: 100%;
 }
+.navigation li.nav-header,
 .navigation li.item {
-  margin-bottom: 8px;
-  padding-bottom: 8px;
+  padding: 10px 15px 10px 15px;
+}
+.navigation li.nav-header {
+  color: #779c34;
+  text-transform: uppercase;
+}
+.navigation li.item {
   border-bottom: 1px solid #333;
+}
+.navigation li.item.active-item {
+  background-color: #222;
+}
+.navigation li.item:last-child {
+  margin-bottom: 10px;
+  border-bottom: none;
 }
 .navigation li.item a {
   color: #bbb;

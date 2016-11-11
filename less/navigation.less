@@ -40,16 +40,32 @@
     }
 
     .list {
-        padding: 10px 15px 0 15px;
         position: relative;
         overflow: auto;
         width: 100%;
     }
 
+	li.nav-header,
+	li.item {
+		padding: 10px 15px 10px 15px;
+	}
+
+	li.nav-header {
+		color: @colorSubtitle;
+		text-transform: uppercase;
+	}
+
     li.item {
-        margin-bottom: 8px;
-        padding-bottom: 8px;
         border-bottom: 1px solid #333;
+
+		&.active-item {
+			background-color: #222;
+		}
+
+		&:last-child {
+			margin-bottom: 10px;
+			border-bottom: none;
+		}
 
         a {
             color: #bbb;
