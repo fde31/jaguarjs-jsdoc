@@ -144,16 +144,8 @@ li {
 .main dd {
   font-size: 12px;
 }
-.main h4.name span.type-signature {
-  display: inline-block;
-  border-radius: 3px;
-  background-color: gray;
-  color: #fff;
-  font-size: 0.7em;
-  padding: 2px 4px;
-}
 .main h4.name span.type {
-  margin-left: 5px;
+  margin-left: 6px;
 }
 .main h4.name span.glyphicon {
   display: inline-block;
@@ -161,10 +153,12 @@ li {
   color: #e1e1e1;
   margin-left: 7px;
 }
-.main h4.name span.returnType {
-  margin-left: 3px;
-  background-color: transparent!important;
-  color: gray!important;
+.main h4.name span.type-signature,
+.main h4.name span.return-type {
+  margin-left: 7px;
+  font-size: 13px;
+  font-weight: normal;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 .main span.static {
   display: inline-block;
@@ -250,14 +244,13 @@ li {
 }
 .main .nameContainer .inherited {
   display: inline-block;
-  border-radius: 3px;
-  background-color: #888!important;
   font-size: 0.7em;
   padding: 2px 4px;
   margin-right: 5px;
+  text-decoration: underline;
 }
 .main .nameContainer .inherited a {
-  color: #fff;
+  color: gray;
 }
 .main .nameContainer .tag-source {
   position: absolute;
@@ -272,6 +265,7 @@ li {
   color: gray;
 }
 .main .nameContainer h4 {
+  margin-bottom: 1px;
   margin-right: 150px;
   line-height: 1.3;
 }
@@ -282,6 +276,12 @@ li {
 }
 .main .nameContainer h4 .type-signature.type a {
   color: #fff;
+}
+.main .nameContainer .name-attr {
+  display: inline-block;
+  color: gray;
+  font-size: 0.9em;
+  font-weight: normal;
 }
 .main pre {
   font-size: 11px;
