@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title><?js= ((env.conf.templates.meta && env.conf.templates.meta.title) || title) ?></title>
+    <title><?js= ((env.conf.templates.meta && env.conf.templates.meta.title) || (env.conf.templates.meta && env.conf.templates.meta.titlePrefix ? [env.conf.templates.meta.titlePrefix, title].join(" - ") : title)) ?></title>
     <?js if (env.conf.templates.meta) { ?>
     <?js if (env.conf.templates.meta.description) { ?><meta name="description" content="<?js= env.conf.templates.meta.description ?>" /><?js } ?>
     <?js if (env.conf.templates.meta.keyword) { ?>
@@ -26,7 +26,7 @@
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
     <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="styles/jaguar.css">
-    
+
     <?js if (env.conf.templates) { ?>
     <script>
     var config = <?js= JSON.stringify(env.conf.templates) ?>;
@@ -38,7 +38,7 @@
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', config.googleAnalytics]);
       _gaq.push(['_trackPageview']);
-    
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
