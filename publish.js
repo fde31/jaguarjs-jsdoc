@@ -543,7 +543,8 @@ exports.publish = function(taffyData, opts, tutorials) {
             header: tutorial.title,
             content: tutorial.parse(),
             children: tutorial.children,
-			filename: filename
+			filename: filename,
+            packages: packages
         };
 
         var tutorialPath = path.join(outdir, filename),
